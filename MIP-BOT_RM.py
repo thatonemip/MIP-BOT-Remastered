@@ -16,6 +16,7 @@ print("Loaded 'random'")
 time.sleep(1)
 print("Loaded all imports")
 from os import system, name
+from datetime import datetime
 from time import sleep
 def screen_clear():
    if name == 'nt':
@@ -45,7 +46,7 @@ screen_clear
 print("DISCLAMER!!!")
 print()
 print("this python A.I is very buggy!")
-time.sleep(3)
+time.sleep(2)
 screen_clear()
 print("What is your name?")
 username = input("Name: ")
@@ -55,7 +56,7 @@ screen_clear()
 
 print("This is MIP-BOT")
 print("Prototype Version: (no longer an prototype)")
-print("Version: 0.0.2 beta")
+print("Version: 0.0.3 beta")
 print("Programmed by: Isaac D aka 'Therealmip'")
 print()
 print("NOTE: This AI chatbot origanally from:")
@@ -69,11 +70,12 @@ print()
 getnamewhat()
 print()
 print()
+
 def saysomethingpan():
   saywhat1 = input("Say: ")
 
   if saywhat1 == ("hello"):
-    print ("Greetings sir")
+    print ("Greetings", username)
     saysomethingpan()
 
   elif saywhat1 == ("exit"):
@@ -82,15 +84,25 @@ def saysomethingpan():
     exit
 
   elif saywhat1 == ("what is my name"):
-    print("Your name is, username")
+    print("Your name is", username)
     saysomethingpan()
 
   elif saywhat1 == ("test"):
-    print("BRUH")
+    print("This is an test")
+    print("Hello there")
+    print("can you read this")
+    print()
+    print("TEST, TEST")
     saysomethingpan()
 
   elif saywhat1 == ("!clear"):
     screen_clear()
+    saysomethingpan()
+
+  elif saywhat1 == ("what time is it"):
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    print("The current time is", current_time)
     saysomethingpan()
 
   elif saywhat1 == ("!help"):
@@ -98,6 +110,12 @@ def saysomethingpan():
     print("!help -Opens the help ui")
     print("!clear -Clears the screen")
     print()
+    saysomethingpan()
+
+  elif saywhat1 == ("say"):
+    print("What do you want me to say?")
+    saythingwhat1 = input("Say: ")
+    print(saythingwhat1)
     saysomethingpan()
 
   elif saywhat1 == ("who is Therealmip"):
@@ -111,9 +129,13 @@ def saysomethingpan():
   elif saywhat1 == ("who made you"):
     print("I was programmed by Isaac D")
 
+  elif saywhat1 == ("yeah"):
+    print("Mhm")
+    saysomethingpan()
+
   elif saywhat1 == ("how are you"):
     print("I am doing fine today, how about you", username)
-    howaboutu = input("Say: ")
+    howaboutu = input("good, fine, bad: ")
 
     if howaboutu == ("good"):
       print("Thats nice")
