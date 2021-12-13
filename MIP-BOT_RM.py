@@ -64,7 +64,7 @@ screen_clear()
 #Lots of info is shown on the screen here
 print("This is MIP-BOT")
 print("Prototype Version: (no longer an prototype)")
-print("Version: 0.0.4 beta")
+print("Version: 0.0.5 beta")
 print("Programmed by: Isaac D aka 'Therealmip'")
 print()
 print("NOTE: This AI chatbot origanally from:")
@@ -88,10 +88,30 @@ def saysomethingpan():
     print ("Greetings", username)
     saysomethingpan()
 
+  #Runs an function that spams 'YOUR COMPUTER HAS AN VIRUS'
+  elif saywhat1 == ("chaos"):
+    print("Ah, so you want me to cause chaos right now?")
+    time.sleep(1)
+    print("Loading 'chaos'. . . ")
+    time.sleep(3)
+    print("Running 'mip-bot spammer.exe' in...")
+    print("3")
+    time.sleep(1)
+    print("2")
+    time.sleep(1)
+    print("1")
+    time.sleep(1)
+    def spammerwhat():
+      time.sleep(0.2)
+      print("YOUR COMPUTER HAS AN VIRUS!")
+      spammerwhat()
+    
+    spammerwhat()
 
+  #Runs the function 'MW-CE'
   elif saywhat1 == ("!MW-CE"):
     screen_clear()
-    version = ("ver 0.0.2")
+    version = ("ver 0.0.4")
     def infoofmwce():
       print("MIPWARE Command Executor (MW-CE)")
       print("Copyright 2021-2022")
@@ -124,12 +144,47 @@ def saysomethingpan():
           print("exit: Exits the MW-CE")
           print("print: Prints text on the screen")
           print("info: shows the bulid, version and info of MW-CE")
+          print("list: Shows external files that can be runned")
+          print("run (file name): runs the file that is listed in the command")
           print()
           dosmainmenu()
 
         elif command == ("clear"):
           screen_clear()
           dosmainmenu()
+
+        elif command == ("list"):
+          print()
+          print("========files========")
+          print()
+          print("1. testfile.py")
+          print()
+          dosmainmenu()
+
+        elif command == ("run spammer.exe"):
+          print("WARNING: This will spam text on your screen")
+          print("Are you sure you want to run this program?")
+          commandwhat1 = input("y? n?: ")
+          
+          if commandwhat1 == ("y"):
+            print("Running 'spammer.exe'...")
+            def spammerwhat4():
+              time.sleep(0.2)
+              print("YOUR COMPUTER HAS AN VIRUS!")
+              spammerwhat4()
+            spammerwhat4()
+
+          
+
+          elif commandwhat1 == ("n"):
+            print("Aborting")
+            dosmainmenu()
+
+          else:
+            print("Invalid choice")
+            dosmainmenu()
+
+
 
         elif command == ("exit"):
           screen_clear()
@@ -140,6 +195,16 @@ def saysomethingpan():
           print(GYTVTRCT)
           dosmainmenu()
 
+        elif command == ("time"):
+          now = datetime.now()
+          current_time = now.strftime("%H:%M:%S")
+          print("The current time is", current_time)
+          dosmainmenu()
+
+        elif command == ("run testfile.py"):
+          exec(open('testfile.py').read())
+          dosmainmenu()
+          
         elif command == ("info"):
           infoofmwce()
           dosmainmenu()
@@ -188,6 +253,10 @@ def saysomethingpan():
     print("I was made/programmed somethime near Dec 8 2021")
     saysomethingpan()
 
+  elif saywhat1 == ("who are you"):
+    print("I am the newer ver of MIP-BOT")
+    saysomethingpan()
+
   elif saywhat1 == ("what time is it"):
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
@@ -229,6 +298,10 @@ def saysomethingpan():
 
   elif saywhat1 == ("who is Isaac D"):
     print("Isaac D is 'Therealmip', he programmed me")
+    saysomethingpan()
+
+  elif saywhat1 == ("what is your fav vid"):
+    print("I do not have an fav vid due to me being an chat bot")
     saysomethingpan()
 
   elif saywhat1 == ("who made you"):
