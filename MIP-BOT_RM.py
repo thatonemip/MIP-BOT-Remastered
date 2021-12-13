@@ -1,3 +1,5 @@
+#please note: This A.I/Chatbot does not use Chatterbot.
+#Loads in all the imports "needed" to run MIP-BOT RM
 print("Loading some things. . .")
 import os
 print("Loaded 'os'")
@@ -18,6 +20,8 @@ print("Loaded all imports")
 from os import system, name
 from datetime import datetime
 from time import sleep
+
+#Def's the "screen_clear" function to clear the screen
 def screen_clear():
    if name == 'nt':
       _ = system('cls')
@@ -25,17 +29,17 @@ def screen_clear():
       _ = system('clear')
 sleep(2)
 
-
 def getnamewhat():
   print("Hello there", username, "type something")
   print("to speak to me")
 
+#Name screen
 screen_clear()
 print("=====================================")
 print()
 print()
 print("             MIPWARE.INC")
-print("              2021-2022              ")
+print("              2021-2022 ")
 print()
 print()
 print("              MIP-BOT")
@@ -48,15 +52,19 @@ print()
 print("this python A.I is very buggy!")
 time.sleep(2)
 screen_clear()
+
+#Asks for the users name
 print("What is your name?")
 username = input("Name: ")
 print("Hello there", username)
-time.sleep(2)
+time.sleep(1.5)
 screen_clear()
 
+
+#Lots of info is shown on the screen here
 print("This is MIP-BOT")
 print("Prototype Version: (no longer an prototype)")
-print("Version: 0.0.3 beta")
+print("Version: 0.0.4 beta")
 print("Programmed by: Isaac D aka 'Therealmip'")
 print()
 print("NOTE: This AI chatbot origanally from:")
@@ -71,12 +79,85 @@ getnamewhat()
 print()
 print()
 
+#Def's the part where you can talk to the A.I/Chatbot
+#or what i like to call it, the "say" function
 def saysomethingpan():
   saywhat1 = input("Say: ")
 
   if saywhat1 == ("hello"):
     print ("Greetings", username)
     saysomethingpan()
+
+
+  elif saywhat1 == ("!MW-CE"):
+    screen_clear()
+    version = ("ver 0.0.2")
+    def infoofmwce():
+      print("MIPWARE Command Executor (MW-CE)")
+      print("Copyright 2021-2022")
+      print(version)
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      print()
+      def dosmainmenu():
+        command = input("Command: ")
+        #commands
+        if command == ("help"):
+          print()
+          print("help: opens an list of commands")
+          print("clear: Clears the screen")
+          print("exit: Exits the MW-CE")
+          print("print: Prints text on the screen")
+          print("info: shows the bulid, version and info of MW-CE")
+          print()
+          dosmainmenu()
+
+        elif command == ("clear"):
+          screen_clear()
+          dosmainmenu()
+
+        elif command == ("exit"):
+          screen_clear()
+          saysomethingpan()
+
+        elif command == ("print"):
+          GYTVTRCT = input("Enter text to print: ")
+          print(GYTVTRCT)
+          dosmainmenu()
+
+        elif command == ("info"):
+          infoofmwce()
+          dosmainmenu()
+
+        elif command == ("easteregg1"):
+          print("Android is better then IOS, change my mind")
+          dosmainmenu()
+
+        else:
+          print("ERROR 001: Invlid command")
+          dosmainmenu()
+
+      dosmainmenu()
+    infoofmwce()
+
+
+
+
 
   elif saywhat1 == ("exit"):
     print("Exiting software. . .")
@@ -99,17 +180,35 @@ def saysomethingpan():
     screen_clear()
     saysomethingpan()
 
+  elif saywhat1 == ("do you hate me"):
+    print("No, i do not hate you or anyone :)")
+    saysomethingpan()
+
+  elif saywhat1 == ("When was you programmed"):
+    print("I was made/programmed somethime near Dec 8 2021")
+    saysomethingpan()
+
   elif saywhat1 == ("what time is it"):
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     print("The current time is", current_time)
     saysomethingpan()
 
+  elif saywhat1 == ("!debug"):
+    print("Coming soon!")
+    saysomethingpan()
+
   elif saywhat1 == ("!help"):
     print()
     print("!help -Opens the help ui")
     print("!clear -Clears the screen")
+    print("!debug -Coming soon!")
+    print("!MW-CE -Starts MW-CE")
     print()
+    saysomethingpan()
+
+  elif saywhat1 == ("what"):
+    print("Wait, what? :/")
     saysomethingpan()
 
   elif saywhat1 == ("say"):
@@ -120,6 +219,12 @@ def saysomethingpan():
 
   elif saywhat1 == ("who is Therealmip"):
     print("'Therealmip' is Isaac D, he programmed me")
+    saysomethingpan()
+
+  elif saywhat1 == ("what is the time"):
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    print("The current time is", current_time)
     saysomethingpan()
 
   elif saywhat1 == ("who is Isaac D"):
@@ -162,4 +267,5 @@ def saysomethingpan():
     print("I dont know that")
     saysomethingpan()
 
+#Runs the "say" function that we defed
 saysomethingpan()
