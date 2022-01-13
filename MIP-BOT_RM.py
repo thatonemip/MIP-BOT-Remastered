@@ -39,7 +39,7 @@ print("=====================================")
 print()
 print()
 print("             MIPWARE.INC")
-print("              2021-2022 ")
+print("              2022-2023 ")
 print()
 print()
 print("              MIP-BOT")
@@ -64,7 +64,7 @@ screen_clear()
 #Lots of info is shown on the screen here
 print("This is MIP-BOT")
 print("Prototype Version: (no longer an prototype)")
-print("Version: 0.0.5 beta")
+print("Version: 0.0.6 beta")
 print("Programmed by: Isaac D aka 'Therealmip'")
 print()
 print("NOTE: This AI chatbot origanally from:")
@@ -86,6 +86,18 @@ def saysomethingpan():
 
   if saywhat1 == ("hello"):
     print ("Greetings", username)
+    saysomethingpan()
+
+  elif saywhat1 == ("hi"):
+    print("Greetings", username)
+    saysomethingpan()
+
+  elif saywhat1 == ("greetings"):
+    print("Greetings", username)
+    saysomethingpan()
+
+  elif saywhat1 == ("hello there"):
+    print("Greetings", username)
     saysomethingpan()
 
   #Runs an function that spams 'YOUR COMPUTER HAS AN VIRUS'
@@ -157,7 +169,7 @@ def saysomethingpan():
           print()
           print("========files========")
           print()
-          print("1. testfile.py")
+          print("Coming soon!")
           print()
           dosmainmenu()
 
@@ -200,11 +212,13 @@ def saysomethingpan():
           current_time = now.strftime("%H:%M:%S")
           print("The current time is", current_time)
           dosmainmenu()
-
-        elif command == ("run testfile.py"):
-          exec(open('testfile.py').read())
+        
+        #File reading system template
+        elif command == (" run File name here"):
+          exec(open('File name here').read())
           dosmainmenu()
-          
+
+
         elif command == ("info"):
           infoofmwce()
           dosmainmenu()
@@ -222,7 +236,20 @@ def saysomethingpan():
 
 
 
+  elif saywhat1 == ("what do you hate"):
+    print("I hate computer virus's")
+    saysomethingpan()
 
+  elif saywhat1 == ("what does chaos mean"):
+    print("Chaos")
+    print()
+    print("noun:")
+    print("complete disorder and confusion.")
+    print()
+    print("in Physics:")
+    print("behavior so unpredictable as to appear random, owing to great sensitivity to small changes in conditions.")
+    print()
+    saysomethingpan()
 
   elif saywhat1 == ("exit"):
     print("Exiting software. . .")
@@ -231,6 +258,10 @@ def saysomethingpan():
 
   elif saywhat1 == ("what is my name"):
     print("Your name is", username)
+    saysomethingpan()
+
+  elif saywhat1 == ("who am i"):
+    print("You are", username)
     saysomethingpan()
 
   elif saywhat1 == ("test"):
@@ -309,6 +340,34 @@ def saysomethingpan():
 
   elif saywhat1 == ("yeah"):
     print("Mhm")
+    saysomethingpan()
+
+  elif saywhat1 == ("what does api mean"):
+    print()
+    print("Application programming interface")
+    print()
+    saysomethingpan()
+
+  elif saywhat1 == ("what does ide mean"):
+    print()
+    print("Integrated development environment")
+    print()
+    saysomethingpan()
+
+  elif saywhat1 == ("what is a ide"):
+    print()
+    print("Integrated development environment")
+    print()
+    print("An integrated development environment is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of at least a source code editor, build automation tools and a debugger.")
+    print()
+    saysomethingpan()  
+
+  elif saywhat1 == ("what is a api"):
+    print()
+    print("Application programming interface")
+    print()
+    print("An application programming interface is a connection between computers or between computer programs. It is a type of software interface, offering a service to other pieces of software. A document or standard that describes how to build or use such a connection or interface is called an API specification")
+    print()
     saysomethingpan()
 
   elif saywhat1 == ("how are you"):
